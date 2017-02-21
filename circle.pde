@@ -1,4 +1,4 @@
-public class circle {
+public class Circle {
 	
 	/* 円の初期配置 */
 	private float ellipseX;
@@ -12,7 +12,7 @@ public class circle {
 	private int ellipseSizeY = 5;
 
 	// イニシャライザ
-	public circle (float x, float y, float x_, float y_){
+	public Circle (float x, float y, float x_, float y_){
 		ellipseX = x;
 		ellipseY = y;
 		incrementX = x_;
