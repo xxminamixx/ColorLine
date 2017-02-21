@@ -8,6 +8,16 @@ Circle circle6;
 Circle circle7;
 Circle circle8;
 
+Circle circle9;
+Circle circle10;
+Circle circle11;
+Circle circle12;
+
+Circle circle13;
+Circle circle14;
+Circle circle15;
+Circle circle16;
+
 void setup() {
   size(600, 200);
   background(255, 255, 255); // 背景を白にする
@@ -23,9 +33,20 @@ void setup() {
   circle6 = new Circle(width - 1, 0.0, 2.5, 1.5);
   circle7 = new Circle(width - 1, 0.0, 2.0, 1.5);
   circle8 = new Circle(width - 1, 0.0, 1.5, 1.5);
+
+  circle9 = new Circle(0.0, height - 1, 3.0, 1.5);
+  circle10 = new Circle(0.0, height - 1, 2.5, 1.5);
+  circle11 = new Circle(0.0, height - 1, 2.0, 1.5);
+  circle12 = new Circle(0.0, height - 1, 1.5, 1.5);
+
+  circle13 = new Circle(width - 1, height - 1, 3.0, 1.5);
+  circle14 = new Circle(width - 1, height - 1, 2.5, 1.5);
+  circle15 = new Circle(width - 1, height - 1, 2.0, 1.5);
+  circle16 = new Circle(width - 1, height - 1, 1.5, 1.5);
 }
 
 void draw() {
+  background(255, 255, 255);
   circle1.display();
   circle2.display();
   circle3.display();
@@ -35,5 +56,15 @@ void draw() {
   circle6.display();
   circle7.display();
   circle8.display();
+
+  circle9.display();
+  circle10.display();
+  circle11.display();
+  circle12.display();
+
+  circle13.display();
+  circle14.display();
+  circle15.display();
+  circle16.display();
 }
 
