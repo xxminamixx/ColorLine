@@ -8,8 +8,8 @@ public class circle {
 	private float incrementX;
 	private float incrementY;
 
-	private int ellipseSizeX = 10;
-	private int ellipseSizeY = 10;
+	private int ellipseSizeX = 5;
+	private int ellipseSizeY = 5;
 
 	// イニシャライザ
 	public circle (float x, float y, float x_, float y_){
@@ -43,13 +43,13 @@ public class circle {
 		}
 	}
 	/* 色を変える */
-	void colorChange() {
-  		fill(random(0, 255),random(0, 255),random(0, 255));
+	private void colorChange() {
+  		fill(random(0, 255),random(0, 255),random(0, 255), 100);
 	}
 
 	/* クリックした時の処理 */
-	void mouseClicked() {
+	private void mouseClicked() {
   		colorChange();
 	}
-	
+
 }
