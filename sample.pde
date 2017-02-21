@@ -1,14 +1,11 @@
-/* 円の初期配置 */
-float ellipseX = 0;
-float ellipseY = 0;
-
-/* 円の移動量 */
-float incrementX = 3.0;
-float incrementY = 1.5;
-
 /* 画面サイズ */
 int sizeX = 600;
 int sizeY = 200;
+
+circle circle1 = new circle(0.0, 0.0, 3.0, 1.5);
+circle circle2 = new circle(0.0, 0.0, 2.5, 1.5);
+circle circle3 = new circle(0.0, 0.0, 2.0, 1.5);
+circle circle4 = new circle(0.0, 0.0, 1.5, 1.5);
 
 void setup() {
   size(600, 200);
@@ -18,36 +15,9 @@ void setup() {
 }
 
 void draw() {
-  ellipse(ellipseX, ellipseY, 20, 20);
-  move();
-  reflection();
+  circle1.display();
+  circle2.display();
+  circle3.display();
+  circle4.display();
 }
 
-/* 円を移動させる */
-void move() {
-  ellipseX += incrementX;
-  ellipseY += incrementY;
-}
-
-/* 円を反射させる */
-void reflection() {
-  if ( ellipseX >= width || ellipseX <= 0 ) {
-    incrementX *= -1;
-    colorChange();
-  }
-
-  if ( ellipseY >= height || ellipseY <= 0 ) {
-    incrementY *= -1;
-    colorChange();
-  }
-}
-
-/* 色を変える */
-void colorChange() {
-  fill(random(0, 255),random(0, 255),random(0, 255));
-}
-
-/* クリックした時の処理 */
-void mouseClicked() {
-  colorChange();
-}
