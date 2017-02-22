@@ -4,12 +4,16 @@ public class Circle {
 	private float ellipseX;
 	private float ellipseY;
 
+	private float capX;
+	private float capY;
+
 	/* 円の移動量 */
 	private float incrementX;
 	private float incrementY;
 
-	private int ellipseSizeX = 5;
-	private int ellipseSizeY = 5;
+	/* 円の大きさ */
+	private int ellipseSizeX = 10;
+	private int ellipseSizeY = 10;
 
 	// イニシャライザ
 	public Circle (float x, float y, float x_, float y_){
@@ -20,6 +24,9 @@ public class Circle {
 	}
 
 	public void display() {
+		// 残像円
+		ellipse(capX, capY, ellipseSizeX, ellipseSizeY);
+		// 円
 		ellipse(ellipseX, ellipseY, ellipseSizeX, ellipseSizeY);
 		move();
 		reflection();
@@ -27,6 +34,8 @@ public class Circle {
 
 	/* 円を移動させる */
 	private void move() {
+		capX = ellipseX;
+		capY = ellipseY;
 		ellipseX += incrementX;
  		ellipseY += incrementY;
 	}
@@ -49,7 +58,9 @@ public class Circle {
 
 	/* クリックした時の処理 */
 	private void mouseClicked() {
-  		colorChange();
+  		// colorChange();
+  		ellipseX = mouseX;
+  		ellipseY = mouseY;
 	}
 
 }
