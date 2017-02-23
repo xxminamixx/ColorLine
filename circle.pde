@@ -16,11 +16,11 @@ public class Circle {
 	private color myColor = color(100, 144, 22);
 
 	// イニシャライザ
-	public Circle (float x, float y, float x_, float y_){
-		ellipseX = x;
-		ellipseY = y;
-		incrementX = x_;
-		incrementY = y_;
+	public Circle (float ellipseX, float ellipseY, float incrementX, float incrementY){
+		this.ellipseX = ellipseX;
+		this.ellipseY = ellipseY;
+		this.incrementX = incrementX;
+		this.incrementY = incrementY;
 	}
 
 	public void display() {
