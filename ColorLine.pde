@@ -46,7 +46,6 @@ void setup() {
 }
 
 void draw() {
-  background(255, 255, 255);
   circle1.display();
   circle2.display();
   circle3.display();
@@ -66,5 +65,9 @@ void draw() {
   circle14.display();
   circle15.display();
   circle16.display();
+
+  // 透明な矩形で残像表現
+  fill(255, 255, 255, 30);
+  rect(0, 0, width, height);
 }
 
